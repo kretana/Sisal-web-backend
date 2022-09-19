@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applicants",
+  "info": {
+    "singularName": "applicant",
+    "pluralName": "applicants",
+    "displayName": "Applicant"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Last_name": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "CV": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Email": {
+      "type": "email"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job.job",
+      "inversedBy": "applicants"
+    }
+  }
+}
