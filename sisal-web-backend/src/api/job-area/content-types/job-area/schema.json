@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_areas",
+  "info": {
+    "singularName": "job-area",
+    "pluralName": "job-areas",
+    "displayName": "Job Area"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Area_Name": {
+      "type": "string"
+    },
+    "jobs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job.job",
+      "mappedBy": "job_areas"
+    }
+  }
+}

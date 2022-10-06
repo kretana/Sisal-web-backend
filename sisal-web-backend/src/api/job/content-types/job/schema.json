@@ -57,14 +57,6 @@
         "In Presence"
       ]
     },
-    "Job_Area": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "applicants": {
       "type": "relation",
       "relation": "manyToMany",
@@ -108,6 +100,12 @@
         "c) 31 - 120 days ago",
         "d) 121 - 365 days ago"
       ]
+    },
+    "job_areas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::job-area.job-area",
+      "inversedBy": "jobs"
     }
   }
 }
