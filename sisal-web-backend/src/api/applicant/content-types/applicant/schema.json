@@ -37,7 +37,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::job.job",
-      "inversedBy": "applicants"
+      "mappedBy": "applicants"
     }
   }
 }
